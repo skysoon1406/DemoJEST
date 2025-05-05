@@ -37,8 +37,12 @@ describe("存錢相關功能",() => {
 
 
 describe("提款相關功能",() => {
+    let atm 
+    beforeEach(() => {
+        atm = new ATM(10);
+    })
     test("可以提款",() => {
-        const atm = new ATM(10);
+        // const atm = new ATM(10);
         const money = atm.withdraw(5);
         expect(atm.balance()).toBe(5);
         expect(money).toBe(5);
@@ -46,7 +50,7 @@ describe("提款相關功能",() => {
     })
 
     test("可以提款2",() => {
-        const atm = new ATM(10);
+        // const atm = new ATM(10);
         const money = atm.withdraw(3);
         expect(atm.balance()).toBe(7);
         expect(money).toBe(3);
@@ -54,14 +58,14 @@ describe("提款相關功能",() => {
     })
 
     test("不可提0 或小於0 的金額",() => {
-        const atm = new ATM(10);
+        // const atm = new ATM(10);
         const money = atm.withdraw(-3);
         expect(atm.balance()).toBe(10);
         expect(money).toBe(0);
     })
 
     test("不可提超過餘額",() => {
-        const atm = new ATM(10);
+        // const atm = new ATM(10);
         const money = atm.withdraw(100);
         expect(atm.balance()).toBe(10);
         expect(money).toBe(0);
