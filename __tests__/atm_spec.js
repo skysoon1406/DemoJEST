@@ -45,4 +45,19 @@ describe("提款相關功能",() => {
         //  不建議這樣寫，因爲 會造成 false positive 的可能性
     })
 
+    test("可以提款2",() => {
+        const atm = new ATM(10);
+        const money = atm.withdraw(3);
+        expect(atm.balance()).toBe(7);
+        expect(money).toBe(3);
+        //  不建議這樣寫，因爲 會造成 false positive 的可能性
+    })
+
+    test("不可提0 或小於0 的金額",() => {
+        const atm = new ATM(10);
+        const money = atm.withdraw(-3);
+        expect(atm.balance()).toBe(10);
+        expect(money).toBe(0);
+    })
+
 })
