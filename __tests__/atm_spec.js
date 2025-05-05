@@ -1,5 +1,5 @@
-// import { ATM } from "../lib/atm.js"
-const ATM =  require("../lib/atm")
+import { ATM } from "../lib/atm.js"
+// const ATM =  require("../lib/atm")
 // import ATM from '../lib/atm.js';
 
 // 可以用 describe 的把下面的Test全部包起來：
@@ -31,6 +31,17 @@ describe("存錢相關功能",() => {
     
         // Assert評估 =  存款金額不變
         expect(atm.balance()).toBe(10);
+    })
+
+})
+
+
+describe("提款相關功能",() => {
+    test("可以提款",() => {
+        const atm = new ATM(10);
+        const money = atm.withdraw(5);
+        expect(atm.balance()).toBe(5);
+        expect(money).toBe(5);
     })
 
 })
