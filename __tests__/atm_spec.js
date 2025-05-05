@@ -1,5 +1,5 @@
 // import { ATM } from "../lib/atm.js"
-const ATM =  require("../lib/atm.js")
+const ATM =  require("../lib/atm")
 // import ATM from '../lib/atm.js';
 
 // 可以用 describe 的把下面的Test全部包起來：
