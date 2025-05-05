@@ -6,7 +6,8 @@ class ATM {
 
     deposit(amount){
         if (amount > 0 ){
-            this.currentBalance = this.currentBalance + amount
+            this.currentBalance = this.currentBalance + amount 
+            // 可以寫成    this.currentBalance += amount 
         }
     }
 
