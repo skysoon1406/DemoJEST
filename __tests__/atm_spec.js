@@ -1,20 +1,6 @@
-
-class ATM {
-    constructor(currentBalance = 0) {
-        this.currentBalance = currentBalance
-    }
-
-    deposit(amount){
-        if (amount > 0 ){
-            this.currentBalance = this.currentBalance + amount 
-            // 可以寫成    this.currentBalance += amount 
-        }
-    }
-
-    balance() {
-        return this.currentBalance
-    }
-}
+// import { ATM } from "../lib/atm.js"
+const ATM =  require("../lib/atm.js")
+// import ATM from '../lib/atm.js';
 
 // 可以用 describe 的把下面的Test全部包起來：
 describe("存錢相關功能",() => {
