@@ -42,6 +42,7 @@ describe("提款相關功能",() => {
         const money = atm.withdraw(5);
         expect(atm.balance()).toBe(5);
         expect(money).toBe(5);
+        //  不建議這樣寫，因爲 會造成 false positive 的可能性
     })
 
 })
