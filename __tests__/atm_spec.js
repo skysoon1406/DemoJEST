@@ -60,4 +60,11 @@ describe("提款相關功能",() => {
         expect(money).toBe(0);
     })
 
+    test("不可提超過餘額",() => {
+        const atm = new ATM(10);
+        const money = atm.withdraw(100);
+        expect(atm.balance()).toBe(10);
+        expect(money).toBe(0);
+    })
+
 })
